@@ -48,14 +48,14 @@ public class MainActivity extends AppCompatActivity {
         weatherIcon = findViewById(R.id.weatherIcon);
         button = findViewById(R.id.btn_click);
 
-        content = "https://api.openweathermap.org/data/2.5/weather?q=Seoul&appid=2b28057f46d46a09e97fb9557e1b1a7d";
+        content = "https://openweathermap.org/data/2.5/weather?q=Seoul&appid=439d4b804bc8187953eb36d2a8c26a02";
         callWeatherData(content);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 String city = cityEdit.getText().toString().trim();
                 if (city.length() > 0) {
-                    content = "https://api.openweathermap.org/data/2.5/weather?q=" + city + "&appid=2b28057f46d46a09e97fb9557e1b1a7d";
+                    content = "https://openweathermap.org/data/2.5/weather?q=" + city + "&appid=439d4b804bc8187953eb36d2a8c26a02";
                     callWeatherData(content);
                 } else {
                     Toast.makeText(getApplicationContext(), "Wrong input!", Toast.LENGTH_SHORT).show();
